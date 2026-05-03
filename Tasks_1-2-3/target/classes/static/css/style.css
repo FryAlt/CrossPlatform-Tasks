@@ -1,0 +1,47 @@
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+body { background: var(--light); color: var(--dark); line-height: 1.6; }
+
+/* HEADER */
+.header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-wrap: wrap; gap: 1rem;
+}
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+.header nav a, .header-actions a { margin: 0 0.8rem; text-decoration: none; color: var(--dark); }
+.header-actions { display: flex; align-items: center; gap: 0.5rem; }
+
+/* MAIN */
+.content { padding: 2rem 5%; text-align: center; }
+.hero-image { width: 100%; max-width: 800px; height: auto; border-radius: 12px; margin: 1.5rem 0; }
+
+/* FOOTER */
+.footer {
+    display: flex; flex-wrap: wrap; justify-content: space-around;
+    padding: 2rem 5%; background: var(--dark); color: white; gap: 1.5rem;
+}
+.footer a { color: #93c5fd; text-decoration: none; }
+.footer-col h4 { margin-bottom: 0.5rem; }
+.copyright { width: 100%; text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--gray); }
+
+/* AUTH */
+.auth-container { max-width: 400px; margin: 3rem auto; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.auth-container input, .auth-container button { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid #cbd5e1; border-radius: 6px; }
+.auth-container button { background: var(--primary); color: white; cursor: pointer; font-weight: 600; }
+.error { color: #ef4444; margin-bottom: 0.5rem; }
+
+/* АДАПТИВНОСТЬ (Задание 2) */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; }
+    .header nav { display: flex; flex-direction: column; gap: 0.5rem; }
+    .header-actions { justify-content: center; }
+    .footer { flex-direction: column; align-items: center; text-align: center; }
+    .content { padding: 1rem; }
+    .auth-container { margin: 1rem; width: 90%; }
+}
