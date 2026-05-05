@@ -45,3 +45,32 @@ docker run --rm password-generator
 docker run --rm password-generator 30
 🔐 Сгенерированный пароль: e[8IZhm+JcDm1k(6vX$)PFMlA5xh+D
 ```
+
+### Задание 4
+Создайте docker-compose файл, который будет связывать Java проект, который содержит функции для crud операций над таблицей в бд и базу данных. Java проект должен иметь возможность связываться с бд и работать с ней.
+
+Запус контейнера
+```bash
+PS F:\GitHub\CrossPlatform-Tasks\DockerTask4> docker compose up
+Attaching to java_crud, pg_db
+Container pg_db Waiting 
+pg_db  | 
+pg_db  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+pg_db  | 
+pg_db  | 2026-05-05 17:26:38.258 UTC [1] LOG:  starting PostgreSQL 18.3 (Debian 18.3-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+pg_db  | 2026-05-05 17:26:38.258 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+pg_db  | 2026-05-05 17:26:38.258 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+pg_db  | 2026-05-05 17:26:38.266 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+pg_db  | 2026-05-05 17:26:38.276 UTC [32] LOG:  database system was shut down at 2026-05-05 17:25:20 UTC
+pg_db  | 2026-05-05 17:26:38.283 UTC [1] LOG:  database system is ready to accept connections
+Container pg_db Healthy 
+java_crud  | ✅ Успешное подключение к PostgreSQL
+java_crud  | 📝 Таблица 'users' создана/проверена.
+java_crud  | ➕ Запись добавлена.
+java_crud  | 👀 Чтение записей:
+java_crud  |   ID: 36 | Name: Akiro | Email: akiro@example.com
+java_crud  | ✏️ Запись обновлена.
+java_crud  | 🗑️ Запись удалена.
+java_crud  | 🚀 Все CRUD-операции выполнены успешно!
+java_crud exited with code 0
+```
